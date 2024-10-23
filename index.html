@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -9,23 +9,25 @@
             margin: 0;
             text-align: center;
             position: relative;
+            overflow-x: hidden; /* 수평 스크롤 방지 */
         }
 
         /* 인트로 이미지 설정 */
-        .index-image {
+        .intro-image {
             width: 50%;
             height: auto;
-            max-width: 50%;
+            max-width: 100%;
         }
 
         /* 버튼들을 감싸는 컨테이너 설정 */
         .link-container {
             position: absolute;
-            top: 20%; /* 버튼들을 이미지 위에 배치 */
+            top: -10%; /* 버튼들을 이미지 위에 배치 */
             width: 90%;
             display: flex;
             justify-content: space-evenly; /* 버튼을 동일한 간격으로 배치 */
             align-items: center; /* 버튼이 수직으로도 가운데 정렬되도록 설정 */
+            z-index: 2; /* 링크 버튼이 다른 요소 위에 표시되도록 설정 */
         }
 
         /* 링크 텍스트 디자인 */
@@ -42,7 +44,7 @@
         /* 구름 모양 말풍선 스타일 */
         .speech-bubble {
             position: absolute;
-            top: 40%; /* 조정할 수 있음 */
+            top: 50%; /* 조정할 수 있음 */
             left: 50%;
             transform: translate(-50%, -50%);
             background: #fff;
@@ -53,6 +55,8 @@
             color: #333;
             z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
             display: inline-block; /* 가로로 크기 조절 */
+            max-width: 90%; /* 화면 크기에 맞게 조정 */
+            word-wrap: break-word; /* 긴 문장이 줄 바꿈되도록 설정 */
         }
 
         /* 구름 모양 효과 */
@@ -84,7 +88,7 @@
 <body>
 
     <!-- 인트로 이미지 -->
-    <img src="인트로이미지.JPG" alt="인트로이미지" class="인트로이미지">
+    <img src="인트로이미지.JPG" alt="Intro Image" class="intro-image">
 
     <!-- 구름 모양 말풍선 -->
     <div class="speech-bubble">
@@ -98,8 +102,6 @@
         <a href="./bucket.html" class="link-text">Bucket List</a>
         <a href="./profile.html" class="link-text">Profile</a>
     </div>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </body>
 </html>
-
