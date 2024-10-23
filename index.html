@@ -1,27 +1,105 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>지원쓰 페이지</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
-        <link rel="manifest" href="image/favicon/site.webmanifest">
-        <link rel="mask-icon" href="image/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-    </head>
-    <body style="margin: 0px 0px;">
-        <img src="./image/intro.jpg" alt="인트로 이미지" usemap="#intro-map">
-        <map name="intro-map">
-            <area shape="rect" coords="494,450,792,475" href="mailto:hanwon1230@naver.com" target="_blank" alt="이메일로 이동">
-            <area shape="circle" coords="1086,499,172" href="./main.html" target="_blank" alt="메인페이지로 이동">
-            <area shape="rect" coords="186,202,316,241" href="./resume.html" target="_blank" alt="이력서 페이지로 이동">
-            <area shape="rect" coords="574,201,684,241" href="./story.html" target="_blank" alt="나의 소개 페이지로 이동">
-            <area shape="rect" coords="391,201,502,243" href="./major.html" target="_blank" alt="전공소개 페이지로 이동">
-            <area shape="rect" coords="954,199,1084,243" href="./bucket.html" target="_blank" alt="버킷리스트 페이지로 이동">
-            <area shape="rect" coords="754,203,874,243" href="./album.html" target="_blank" alt="앨범페이지로 이동">
-            <area shape="rect" coords="1153,202,1365,241" href="./slide-album.html" target="_blank" alt="슬라이드 앨범 페이지로 이동">
-            <area shape="rect" coords="493,505,738,526" href="http://mars.dothome.co.kr/" target="_self" alt="메인페이지로 이동">
-        </map>   
-    </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가은쓰 페이지</title>
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            position: relative;
+        }
+
+        /* 인트로 이미지 설정 */
+        .index-image {
+            width: 50%;
+            height: auto;
+            max-width: 50%;
+        }
+
+        /* 버튼들을 감싸는 컨테이너 설정 */
+        .link-container {
+            position: absolute;
+            top: 20%; /* 버튼들을 이미지 위에 배치 */
+            width: 90%;
+            display: flex;
+            justify-content: space-evenly; /* 버튼을 동일한 간격으로 배치 */
+            align-items: center; /* 버튼이 수직으로도 가운데 정렬되도록 설정 */
+        }
+
+        /* 링크 텍스트 디자인 */
+        .link-text {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            text-decoration: none; /* 링크 밑줄 제거 */
+        }
+
+        /* 구름 모양 말풍선 스타일 */
+        .speech-bubble {
+            position: absolute;
+            top: 40%; /* 조정할 수 있음 */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border-radius: 30px; /* 부드러운 모서리 */
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 40px;
+            color: #333;
+            z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
+            display: inline-block; /* 가로로 크기 조절 */
+        }
+
+        /* 구름 모양 효과 */
+        .speech-bubble::before, .speech-bubble::after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            border-radius: 70%; /* 동그란 모양 */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 왼쪽 구름 */
+        .speech-bubble::before {
+            width: 40px;
+            height: 30px;
+            left: -15px; /* 위치 조정 */
+            top: 10px; /* 위치 조정 */
+        }
+
+        /* 오른쪽 구름 */
+        .speech-bubble::after {
+            width: 40px;
+            height: 30px;
+            right: -15px; /* 위치 조정 */
+            top: 10px; /* 위치 조정 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 인트로 이미지 -->
+    <img src="인트로이미지.JPG" alt="인트로이미지" class="인트로이미지">
+
+    <!-- 구름 모양 말풍선 -->
+    <div class="speech-bubble">
+        You can still try again tomorrow!
+    </div>
+
+    <!-- 수평으로 정렬된 링크 버튼들 -->
+    <div class="link-container">
+        <a href="./resume.html" class="link-text">Resume</a>
+        <a href="./major.html" class="link-text">Major</a>
+        <a href="./bucket.html" class="link-text">Bucket List</a>
+        <a href="./profile.html" class="link-text">Profile</a>
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</body>
 </html>
+
