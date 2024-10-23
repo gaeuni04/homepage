@@ -12,8 +12,8 @@
         }
 
         /* 인트로 이미지 설정 */
-        .intro-image {
-            width: 60%;
+        .index-image {
+            width: 80%;
             height: auto;
             max-width: 100%;
         }
@@ -22,7 +22,7 @@
         .link-container {
             position: absolute;
             top: 20%; /* 버튼들을 이미지 위에 배치 */
-            width: 80%;
+            width: 90%;
             display: flex;
             justify-content: space-evenly; /* 버튼을 동일한 간격으로 배치 */
             align-items: center; /* 버튼이 수직으로도 가운데 정렬되도록 설정 */
@@ -47,9 +47,9 @@
             transform: translate(-50%, -50%);
             background: #fff;
             border-radius: 30px; /* 부드러운 모서리 */
-            padding: 20px;
+            padding: 40px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            font-size: 20px;
+            font-size: 40px;
             color: #333;
             z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
             display: inline-block; /* 가로로 크기 조절 */
@@ -66,16 +66,16 @@
 
         /* 왼쪽 구름 */
         .speech-bubble::before {
-            width: 20px;
-            height: 15px;
+            width: 40px;
+            height: 30px;
             left: -15px; /* 위치 조정 */
             top: 10px; /* 위치 조정 */
         }
 
         /* 오른쪽 구름 */
         .speech-bubble::after {
-            width: 20px;
-            height: 15px;
+            width: 40px;
+            height: 30px;
             right: -15px; /* 위치 조정 */
             top: 10px; /* 위치 조정 */
         }
@@ -84,7 +84,7 @@
 <body>
 
     <!-- 인트로 이미지 -->
-    <img src="인트로이미지.JPG" alt="인트로이미지" class="인트로이미지">
+    <img src="index.jpg" alt="index.jpg" class="index.jpg">
 
     <!-- 구름 모양 말풍선 -->
     <div class="speech-bubble">
@@ -102,6 +102,4 @@
 
 </body>
 </html>
-
-
 
