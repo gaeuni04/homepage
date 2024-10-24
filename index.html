@@ -42,12 +42,17 @@
         }
         /* 환영 메시지 스타일 */
         .welcome-text {
+            position: absolute;
+            top: 30%; /* 인트로 이미지 위쪽에 텍스트 배치 */
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 48px;
             font-weight: bold;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 10px; /* 아래쪽 간격 조정 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 가독성을 위한 그림자 */
+            z-index: 1; /* 이미지 위에 표시되도록 설정 */
         }
+
         /* 구름 모양 말풍선 스타일 */
         .speech-bubble {
             position: absolute;
@@ -93,13 +98,14 @@
     </style>
 </head>
 <body>
-    <!-- 인트로 이미지 -->
-    <img src="인트로이미지.JPG" alt="Intro Image" class="intro-image">
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+        <!-- 인트로 이미지 -->
+        <img src="인트로이미지.JPG" alt="Intro Image" class="intro-image">
 
-    <!-- 수평으로 정렬된 링크 버튼들 위에 환영 메시지 -->
-    <div class="link-container">
+        <!-- 이미지 위에 표시할 환영 메시지 -->
         <div class="welcome-text">Welcome Gaeunni's</div>
-    </div>
+
     
     <!-- 구름 모양 말풍선 -->
     <div class="speech-bubble">
