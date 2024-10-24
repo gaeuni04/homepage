@@ -83,24 +83,15 @@
             right: -15px; /* 위치 조정 */
             top: 10px; /* 위치 조정 */
         }
-     /* 상단 환영 텍스트 스타일 */
-        .welcome-text {
-            font-size: 36px;
-            font-weight: bold;
-            color: #333;
-            margin-top: 20px;
-            z-index: 3;
-        }
     </style>
 </head>
 <body>
-
-    <!-- 환영 메시지 -->
-    <div class="welcome-text">Welcome Gaeunni's</div>
-
-    <!-- 인트로 이미지 -->
-    <img src="인트로이미지.JPG" alt="Intro Image" class="intro-image">
-
+    <!-- 인트로 이미지 및 텍스트 포함 컨테이너 -->
+    <div class="intro-image-container">
+        <img src="인트로이미지.JPG" alt="Intro Image" class="intro-image">
+        <!-- 이미지 위에 표시할 환영 메시지 -->
+        <div class="welcome-text">Welcome Gaeunni's</div>
+    </div>
     <!-- 구름 모양 말풍선 -->
     <div class="speech-bubble">
         You can still try again tomorrow!
